@@ -10,7 +10,7 @@ const VolumeSlider = (props) => {
       if(volume > 80 && !found){
         setNotifications([...notifications, warning])
       }
-        if (value < 80 && found) {
+      else if (value < 80) {
         let filteredArray = notifications.filter(message => message !== found)
         setNotifications([...filteredArray])
       }
